@@ -1,0 +1,19 @@
+#!/usr/bin/env node
+// 引入依赖
+'use strict'
+const program = require('commander')
+const config = require('../package.json')
+// 定义版本和参数选项
+program
+  .version(config.version, '-v, --version') //  定义版本号
+  .option('i init [name]', 'generate project') //  生成项目
+program
+  .on('--help', () => {
+    console.log('\n this is god-cli \n')
+  })
+// 解析输入的命令
+program.parse(process.argv)
+// 构建项目
+if(program.init) {
+  require('./god-init')()
+}

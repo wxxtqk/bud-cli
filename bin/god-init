@@ -1,0 +1,31 @@
+'use strict'
+const program = require('commander')
+const chalk = require('chalk')
+const path = require('path')
+const fs = require('fs')
+const co = require('co')
+module.exports = () => {
+  co(function *(){
+    // 检查是否输入有项目名
+    if ((typeof program.init) === 'boolean') {
+      console.log(chalk.red('\n please input the projectName \n'))
+      process.exit()
+    }
+    const projectPath = path.resolve(program.init);
+    // 判断改目录下是否存在改文件夹
+    fs.exists(projectPath, (exist) => {
+      if(exist) {
+        console.log(chalk.red('\n this project is exist \n'))
+        process.exit()
+      } else {
+        // 开始执行创建项目
+        const projectName = path.basename(projectPath);
+        console.log(chalk.green('generate project'))
+        // 执行模板文件的拉取
+        // projectName => 项目名称
+        require('../lib/init')(projectName)
+      }
+    })
+  })
+
+}
