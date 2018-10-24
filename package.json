@@ -1,6 +1,6 @@
 {
   "name": "bud-cli",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "bud-cli",
   "author": "may",
   "main": "index.js",
@@ -23,9 +23,9 @@
     "cli",
     "webpack"
   ],
-  "homepage": "https://github.com/wxxtqk/god-cli/blob/master/README.md",
+  "homepage": "https://github.com/wxxtqk/bud-cli/blob/master/README.md",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/wxxtqk/god-cli.git"
+    "url": "git+https://github.com/wxxtqk/bud-cli"
   }
 }
