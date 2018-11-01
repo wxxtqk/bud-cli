@@ -1,6 +1,6 @@
 {
   "name": "bud-cli",
-  "version": "1.0.1",
+  "version": "2.0.0",
   "description": "bud-cli",
   "author": "may",
   "main": "index.js",
@@ -12,10 +12,13 @@
     "bud": "bin/god"
   },
   "dependencies": {
-    "commander": "^2.19.0",
     "chalk": "^2.4.1",
     "co": "^4.6.0",
+    "co-prompt": "^1.0.0",
+    "commander": "^2.19.0",
     "ora": "^3.0.0",
+    "prompt-radio": "^1.2.1",
+    "prompt-base": "^5.0.0",
     "rimraf": "^2.6.2"
   },
   "keywords": [

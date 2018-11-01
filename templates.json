@@ -1,8 +1,1 @@
-{
-  "tpl": {
-    "react-admin": {
-      "giturl": "https://github.com/wxxtqk/dva-react.git",
-      "desc": "基于dva+antd结合pm2 mock fetch搭建后台管理系统"
-    }
-  }
-}
+{"tpl":{"react-admin":{"giturl":"https://github.com/wxxtqk/dva-react.git","desc":"基于dva+antd结合pm2 mock fetch搭建后台管理系统"}}}

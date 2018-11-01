@@ -7,6 +7,30 @@ const config = require('../package.json')
 program
   .version(config.version, '-v, --version') //  定义版本号
   .option('i init [name]', 'generate project') //  生成项目
+  .option('u use [name]', 'use the template') // 使用模板
+program
+  .command('add')
+  .description('添加模板')
+  .alias('a')
+  .action(() => {
+    require('../lib/add')()
+  })
+// 列出所有模板
+program
+  .command('list')
+  .description('lsit all template')
+  .alias('l')
+  .action(() => {
+    require('../lib/list')()
+  })
+// 删除模板
+program
+  .command('delete')
+  .description('delete template')
+  .alias('d')
+  .action(() => {
+    require('../lib/del')()
+  })
 program
   .on('--help', () => {
     console.log('\n this is god-cli \n')
@@ -14,6 +38,9 @@ program
 // 解析输入的命令
 program.parse(process.argv)
 // 构建项目
-if(program.init) {
+if (program.init) {
   require('./god-init')()
+}
+if (program.use) {
+  require('../lib/use')()
 }
